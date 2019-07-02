@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Hello {{ email }}</h1>
+    <h6>This is your landing page.</h6>
+    <form id="processes">
+        <a class="btn btn-success" href="{{ url_for('process_listing') }}">Show All Processes</a>
+        <a class="btn btn-danger" href="{{ url_for('logout_user') }}">Log out</a>
+    </form>
+{% endblock %}

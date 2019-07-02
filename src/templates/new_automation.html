@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ email }} is logged in</h2>
+    <form id="logout" action="/auth/logout">
+        <button class="btn btn-danger" type="submit">Log out</button>
+    </form>
+    <h2>Creating Automation for process : {{ process.process_name }}</h2>
+    <form id="new-automation" action="/automations/new/{{ process._id }}" method="post">
+        <div class="form-group">
+            <label for="automation_tag">Automation Tag</label>
+            <input type="text" id="automation_tag" class="form-control" name="automation_tag">
+        </div>
+        <div class="form-group">
+            <label for="automation_name">Automation Name</label>
+            <input type="text" id="automation_name" class="form-control" name="automation_name">
+        </div>
+        <div class="form-group">
+            <label for="automation_desc">Automation Description</label>
+            <textarea id="automation_desc" class="form-control" name="automation_desc"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="platform">Platform</label>
+            <input type="text" id="platform" class="form-control" name="platform">
+        </div>
+        <div class="form-group">
+            <label for="golive_dt">Go-live Date</label>
+            <input type="text" id="golive_dt" class="form-control" name="golive_dt">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="status" class="form-control" name="status">
+        </div>
+        <div class="form-group">
+            <label for="retirement_dt">Retirement Date</label>
+            <input type="text" id="retirement_dt" class="form-control" name="retirement_dt">
+        </div>
+        <div class="form-group">
+            <label for="last_certified_dt">Last Certified Date</label>
+            <input type="text" id="last_certified_dt" class="form-control" name="last_certified_dt">
+        </div>
+        <button class="btn btn-success" type="submit">Create Automation</button>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ email }} is logged in</h2>
+    <form id="logout" action="/auth/logout">
+        <button class="btn btn-danger" type="submit">Log out</button>
+    </form>
+    <h3>Editing Process : {{ process.process_name }}</h3>
+    <form id="new-process" action="/processes/edit/{{ process._id }}" method="post">
+        <div class="form-group">
+            <label for="lob">LOB</label>
+            <input type="text" id="lob" class="form-control" name="lob" value="{{ process.lob }}" disabled/>
+        </div>
+        <div class="form-group">
+            <label for="group">Group</label>
+            <input type="text" id="group" class="form-control" name="group" value="{{ process.group }}" disabled/>
+        </div>
+        <div class="form-group">
+            <label for="process_name">Process Name</label>
+            <input type="text" id="process_name" class="form-control" name="process_name" value="{{ process.process_name }}" disabled/>
+        </div>
+        <div class="form-group">
+            <label for="process_desc">Process Description</label>
+            <textarea id="process_desc" class="form-control" name="process_desc" >{{ process.process_desc }}</textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Update Process</button>
+    </form>
+</div>
+{% endblock %}

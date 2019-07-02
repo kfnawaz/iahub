@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+    <h2>{{ email }} is logged in</h2>
+    <form id="logout" action="/auth/logout">
+        <button class="btn btn-danger" type="submit">Log out</button>
+    </form>
+    <h3>Create New Process</h3>
+    <form id="new-process" action="/processes/new" method="post">
+        <div class="form-group">
+            <label for="lob">LOB</label>
+            <input type="text" id="lob" class="form-control" name="lob">
+        </div>
+        <div class="form-group">
+            <label for="group">Group</label>
+            <input type="text" id="group" class="form-control" name="group">
+        </div>
+        <div class="form-group">
+            <label for="process_name">Process Name</label>
+            <input type="text" id="process_name" class="form-control" name="process_name">
+        </div>
+        <div class="form-group">
+            <label for="process_desc">Process Description</label>
+            <textarea id="process_desc" class="form-control" name="process_desc" ></textarea>
+        </div>
+        <button class="btn btn-success" type="submit">Create Process</button>
+    </form>
+</div>
+{% endblock %}
