@@ -1,12 +1,13 @@
-#comment
-
 from typing import Dict
 import pymongo
+import os
 
 
 class Database(object):
 
-    URI = "mongodb://127.0.0.1:27017"
+    #URI = "mongodb://127.0.0.1:27017"
+    #URI = "mongodb://<dbuser>:<dbpassword>@ds139072.mlab.com:39072/heroku_qd4lr870"
+    URI = os.environ.get("MONGOLAB_URI")
     DATABASE = None
 
 
