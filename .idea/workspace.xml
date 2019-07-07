@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20483fa4-1826-4b51-b32f-3f223a2026c8" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/runtime.txt" afterPath="$PROJECT_DIR$/runtime.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/uwsgi.ini" afterPath="$PROJECT_DIR$/uwsgi.ini" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="20483fa4-1826-4b51-b32f-3f223a2026c8" name="Default" comment="" />
     <ignored path="iahub.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
