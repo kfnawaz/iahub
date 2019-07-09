@@ -15,6 +15,7 @@ class Database(object):
     def initialize():
         client = pymongo.MongoClient(Database.URI)
         #Database.DATABASE = client['iahubdb']
+        print(client.get_default_database())
         Database.DATABASE = client.get_default_database()
 
     @staticmethod
